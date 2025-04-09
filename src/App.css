@@ -1,0 +1,24 @@
+.tendina h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  width: inherit;
+}
+
+.results-style {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: goldenrod;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 300px;
+}
