@@ -20,33 +20,20 @@ function App() {
 
   console.log(results);
 
-  const Card = ({ image, name, description }) => {
-    return (
-      <div className="card">
-        <img src={image}></img>
-        <p>
-          <b>Name:</b> {name}
-        </p>
-        <b>Description:</b> {description}
-      </div>
-    );
-  };
-
   return (
-    <div>
+    <div className="container">
       <input
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        placeholder="Cerca un prodotto..."
+        className="searchbar"
       ></input>
       {query.length > 0 && (
-        <div className="tendina">
-          <h1>Suggerimenti</h1>
-          <div className="results-style">
-            {results.map((result) => (
-              <Card key={result.id} {...result} />
-            ))}
-          </div>
+        <div className="dropdown">
+          {results.map((result) => (
+            <p key={result.id}>{result.name}</p>
+          ))}
         </div>
       )}
     </div>
